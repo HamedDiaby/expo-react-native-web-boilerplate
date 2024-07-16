@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "expo-react-native-web-boilerplate",
+    "slug": "expo-react-native-web-boilerplate",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./src/assets/fonts/AvenirNextCyr-Light.ttf",
+            "./src/assets/fonts/AvenirNextCyr-Regular.ttf",
+            "./src/assets/fonts/AvenirNextCyr-Medium.ttf",
+            "./src/assets/fonts/AvenirNextCyr-Demi.ttf",
+            "./src/assets/fonts/AvenirNextCyr-Bold.ttf",
+            "./src/assets/fonts/AvenirNextCyr-Heavy.ttf"
+          ]
+        }
+      ]
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
