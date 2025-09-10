@@ -41,7 +41,7 @@ export const Button: FC<Props> = ({
             borderRadius: 8,
             alignItems: 'center',
             justifyContent: 'center',
-            flexDirection: iconPosition === 'left' ? 'row' : 'row-reverse',
+            flexDirection: "row",
         };
 
         // Size styles

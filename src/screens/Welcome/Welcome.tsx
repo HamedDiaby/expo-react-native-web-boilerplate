@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { ScreenWrapper, Text, Button } from "@components";
+import { ScreenWrapper, Text, Button, Icon } from "@components";
 import { useControllers } from "./useControllers";
 import { ColorsEnum } from "@utils/enums";
 
@@ -27,8 +27,15 @@ export const Welcome:FC = ()=> {
             <Button
                 title={t('welcome.primaryButton')}
                 onPress={handlePrimaryAction}
-                variant="primary"
-                size="large"
+                iconPosition="right"
+                icon={
+                    <Icon 
+                        iconName="arrow-right"
+                        family="Feather"
+                        size={20}
+                        color={ColorsEnum.white}
+                    />
+                }
             />
         </ScreenWrapper>
     )
