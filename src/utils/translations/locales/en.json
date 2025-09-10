@@ -1,5 +1,5 @@
 {
-    "welcome": "Welcome to our application!",
-    "goodbye": "Thank you for visiting!",
-    "changeLanguage": "Change Language"
+    "home": {
+        "welcome": "Welcome to our application {username}!"
+    }
 }

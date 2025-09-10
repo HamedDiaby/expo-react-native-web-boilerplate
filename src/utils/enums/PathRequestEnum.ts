@@ -1,3 +1,3 @@
 export enum PathRequestEnum {
-    LOGIN_USER = '/users/login-user',
+    GET_USER_PROFILE = '/user/profile',
 }

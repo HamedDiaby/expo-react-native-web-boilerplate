@@ -9,7 +9,7 @@
       "@components": ["src/components/index"],
       "@screens": ["src/screens/index"],
       "@navigation": ["src/navigation/index"],
-      "@contexts": ["src/contexts/index"],
+      "@data/*": ["src/data/*"],
     },
     "module": "ESNext",
     "typeRoots": ["./node_modules/@types", "./src/types"]

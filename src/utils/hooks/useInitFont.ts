@@ -20,7 +20,16 @@ export const useInitFont = ()=> {
         }
     }, [loaded, error]);
 
-    if (!loaded && !error) {
-        return null;
-    }
+    // Gestion des erreurs
+    useEffect(() => {
+        if (error) {
+            console.error('Font loading error:', error);
+        }
+    }, [error]);
+
+    return {
+        loaded,
+        error,
+        isReady: loaded && !error,
+    };
 }

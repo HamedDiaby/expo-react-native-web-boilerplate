@@ -1,21 +1,21 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 import { useStyles } from "./useStyles";
-import { useUserSelector } from "@utils/hooks";
 import { useTheme } from '@rneui/themed';
 import { ScreenWrapper, Text } from "@components";
 import { useTranslation } from "@utils/translations";
+import { UserContext } from "@data/contexts";
 
 export const Home:FC = ()=> {
 
     const styles = useStyles();
-    const { t } = useTranslation();
-    const { user } = useUserSelector();
     const { theme } = useTheme();
+    const { t } = useTranslation();
+    const { user } = useContext(UserContext);
 
     return (
         <ScreenWrapper>
             <Text 
-                label={t('welcome')}
+                label={t('home.welcome', { username: user?.firstname! })}
             />
         </ScreenWrapper>
     )

@@ -10,11 +10,10 @@ export type methodType = {
 export interface FetchRequestType {
     route: string,
     method: keyof methodType,
-    accessToken?: string,
+    useAccessToken?: boolean,
     data?: any
+    onChunk?   : (chunk: any) => void;
 }
-
-// export type FetchResponseType = any | ErrorType
 
 export type FetchResponseType = {
     code: number,
