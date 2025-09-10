@@ -51,12 +51,12 @@ export const TabNavigator:FC = () => {
               iconName={iconName}
               family={family}
               size={size}
-              color={focused ? ColorsEnum.white : ColorsEnum.grey3}
+              color={focused ? ColorsEnum.white : ColorsEnum.grey5}
             />
           );
         },
         tabBarActiveTintColor: ColorsEnum.white,
-        tabBarInactiveTintColor: ColorsEnum.grey3,
+        tabBarInactiveTintColor: ColorsEnum.grey5,
         tabBarStyle: {
           backgroundColor: ColorsEnum.black,
           borderTopColor: ColorsEnum.grey2,
