@@ -14,10 +14,10 @@ export default function App() {
   }
 
   return (
-    <AppContextProvider>
-      <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <AppContextProvider>
         <Navigation />
-      </ThemeProvider>
-    </AppContextProvider>
+      </AppContextProvider>
+    </ThemeProvider>
   );
 }
