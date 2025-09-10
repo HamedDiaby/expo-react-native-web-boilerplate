@@ -1,11 +1,10 @@
 import { FC } from "react";
-import { useTheme } from '@rneui/themed';
 import { ScreenWrapper, Text, Button } from "@components";
 import { useControllers } from "./useControllers";
+import { ColorsEnum } from "@utils/enums";
 
 export const Welcome:FC = ()=> {
 
-    const { theme } = useTheme();
     const { t, handlePrimaryAction } = useControllers();
 
     return (
@@ -21,7 +20,7 @@ export const Welcome:FC = ()=> {
                 label={t('welcome.subtitle')}
                 variant="p1"
                 align="center"
-                color={theme.colors.grey5}
+                color={ColorsEnum.grey5}
                 style={{ marginBottom: 40 }}
             />
 

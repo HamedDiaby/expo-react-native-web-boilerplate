@@ -1,8 +1,6 @@
 import React from 'react';
-import { ThemeProvider } from '@rneui/themed';
 import { AppContextProvider } from '@data/contexts';
 import { Navigation } from '@navigation';
-import { theme } from '@utils/themes';
 import { useInitFont } from '@utils/hooks';
 
 export default function App() {
@@ -14,10 +12,8 @@ export default function App() {
   }
 
   return (
-    <ThemeProvider theme={theme}>
-      <AppContextProvider>
-        <Navigation />
-      </AppContextProvider>
-    </ThemeProvider>
+    <AppContextProvider>
+      <Navigation />
+    </AppContextProvider>
   );
 }

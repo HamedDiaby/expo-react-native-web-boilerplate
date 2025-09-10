@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
-import { useTheme } from '@rneui/themed';
+import { ColorsEnum } from '@utils/enums';
 
 export interface ScreenWrapperProps {
   /** Contenu principal de l'écran */
@@ -78,8 +78,6 @@ export const ScreenWrapper: React.FC<ScreenWrapperProps> = ({
   paddingBottom,
 }) => {
 
-  const { theme } = useTheme();
-
   // Calcul du padding à appliquer
   const padding = noPadding ? 0 : (customPadding ?? DEFAULT_PADDING);
 
@@ -131,7 +129,7 @@ export const ScreenWrapper: React.FC<ScreenWrapperProps> = ({
     const wrapperContent = (
       <SafeAreaView style={[
         styles.safeArea, 
-        { backgroundColor: hideColorBg ? theme.colors.transparent : theme.colors.background },
+        { backgroundColor: hideColorBg ? ColorsEnum.transparent : ColorsEnum.background },
         containerStyles,
         ]}
         edges={['top', 'left', 'right']}

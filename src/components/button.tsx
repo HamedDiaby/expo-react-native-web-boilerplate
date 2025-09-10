@@ -1,7 +1,10 @@
-import { FontsEnum } from "@utils/enums";
+import { ColorsEnum, FontsEnum } from "@utils/enums";
 import { FC } from "react";
-import { TouchableOpacity, StyleProp, ViewStyle, TextStyle, ActivityIndicator, View } from "react-native";
-import { useTheme } from '@rneui/themed';
+import { 
+    TouchableOpacity, StyleProp, 
+    ViewStyle, TextStyle, ActivityIndicator, 
+    View,
+} from "react-native";
 import { Text } from "./text";
 
 type Variant = 'primary' | 'secondary' | 'outline' | 'ghost';
@@ -32,7 +35,6 @@ export const Button: FC<Props> = ({
     icon,
     iconPosition = 'left'
 }) => {
-    const { theme } = useTheme();
 
     const getButtonStyle = (): StyleProp<ViewStyle> => {
         const baseStyle: ViewStyle = {
@@ -64,15 +66,15 @@ export const Button: FC<Props> = ({
         // Variant styles
         switch (variant) {
             case 'primary':
-                baseStyle.backgroundColor = disabled ? theme.colors.disabled : theme.colors.primary;
+                baseStyle.backgroundColor = disabled ? ColorsEnum.disabled : ColorsEnum.primary;
                 break;
             case 'secondary':
-                baseStyle.backgroundColor = disabled ? theme.colors.disabled : theme.colors.secondary;
+                baseStyle.backgroundColor = disabled ? ColorsEnum.disabled : ColorsEnum.secondary;
                 break;
             case 'outline':
                 baseStyle.backgroundColor = 'transparent';
                 baseStyle.borderWidth = 1;
-                baseStyle.borderColor = disabled ? theme.colors.disabled : theme.colors.primary;
+                baseStyle.borderColor = disabled ? ColorsEnum.disabled : ColorsEnum.primary;
                 break;
             case 'ghost':
                 baseStyle.backgroundColor = 'transparent';
@@ -88,18 +90,18 @@ export const Button: FC<Props> = ({
 
     const getTextColor = (): string => {
         if (disabled) {
-            return theme.colors.grey3;
+            return ColorsEnum.grey3;
         }
 
         switch (variant) {
             case 'primary':
             case 'secondary':
-                return theme.colors.white;
+                return ColorsEnum.white;
             case 'outline':
             case 'ghost':
-                return theme.colors.primary;
+                return ColorsEnum.primary;
             default:
-                return theme.colors.white;
+                return ColorsEnum.white;
         }
     };
 

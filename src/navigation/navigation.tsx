@@ -14,7 +14,7 @@ const screenOptions = {
 
 export const Navigation:FC = () => (
     <NavigationContainer
-        linking={linking}
+        // linking={linking}
         fallback={<Fragment />}
     >
         <Stack.Navigator

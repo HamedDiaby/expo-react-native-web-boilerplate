@@ -1,13 +1,12 @@
 import { FC } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Platform } from 'react-native';
-import { useTheme } from '@rneui/themed';
 import { Icon, IconFamily } from '@components';
 import { 
   HomeStackScreen, 
   ProfileStackScreen,
 } from './stacks';
-import { NavigationStackEnum } from '@utils/enums';
+import { ColorsEnum, NavigationStackEnum } from '@utils/enums';
 
 // Types pour la navigation par onglets
 export type TabNavigationParamList = {
@@ -24,8 +23,6 @@ const screenOptions = {
 };
 
 export const TabNavigator:FC = () => {
-
-  const { theme } = useTheme();
 
   return (
     <Tab.Navigator
@@ -54,15 +51,15 @@ export const TabNavigator:FC = () => {
               iconName={iconName}
               family={family}
               size={size}
-              color={focused ? theme.colors.white : theme.colors.grey3}
+              color={focused ? ColorsEnum.white : ColorsEnum.grey3}
             />
           );
         },
-        tabBarActiveTintColor: theme.colors.white,
-        tabBarInactiveTintColor: theme.colors.grey3,
+        tabBarActiveTintColor: ColorsEnum.white,
+        tabBarInactiveTintColor: ColorsEnum.grey3,
         tabBarStyle: {
-          backgroundColor: theme.colors.black,
-          borderTopColor: theme.colors.grey2,
+          backgroundColor: ColorsEnum.black,
+          borderTopColor: ColorsEnum.grey2,
           borderTopWidth: 1,
           paddingTop: 8,
           paddingBottom: Platform.OS === 'ios' ? 20 : 8,
