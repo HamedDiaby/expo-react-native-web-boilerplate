@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 
 export const useStyles = ()=> {
 
-  const HomeStyles = useMemo(()=> (
+  const styles = useMemo(()=> (
     StyleSheet.create({
       container: {
         flex: 1,
@@ -13,5 +13,5 @@ export const useStyles = ()=> {
     })
   ), [])
 
-  return HomeStyles;
+  return styles;
 };
