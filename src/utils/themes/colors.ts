@@ -17,6 +17,7 @@ interface Colors {
     error: string;
     disabled: string;
     divider: string;
+    transparent: string;
 }
 
 export const lightColors: Colors = {
@@ -38,4 +39,5 @@ export const lightColors: Colors = {
     error: '#f72585',
     disabled: 'hsl(208, 8%, 90%)',
     divider: '#c4c4c4',
+    transparent: 'transparent',
 }

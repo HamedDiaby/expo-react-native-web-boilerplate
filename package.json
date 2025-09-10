@@ -27,6 +27,7 @@
     "expo": "^53.0.0",
     "expo-device": "~7.1.4",
     "expo-font": "~13.3.2",
+    "expo-localization": "^16.1.6",
     "expo-splash-screen": "~0.30.10",
     "expo-status-bar": "~2.2.3",
     "react": "19.0.0",
@@ -50,7 +51,10 @@
     "doctor": {
       "reactNativeDirectoryCheck": {
         "listUnknownPackages": false,
-        "exclude": ["@rneui/base", "@rneui/themed"]
+        "exclude": [
+          "@rneui/base",
+          "@rneui/themed"
+        ]
       }
     }
   }

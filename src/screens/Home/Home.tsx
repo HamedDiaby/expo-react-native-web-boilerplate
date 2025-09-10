@@ -1,21 +1,22 @@
 import { FC } from "react";
-import { View, Text } from "react-native";
-
 import { useStyles } from "./useStyles";
-import { useTranslation, useUserSelector } from "@utils/hooks";
-
+import { useUserSelector } from "@utils/hooks";
 import { useTheme } from '@rneui/themed';
+import { ScreenWrapper, Text } from "@components";
+import { useTranslation } from "@utils/translations";
 
 export const Home:FC = ()=> {
 
     const styles = useStyles();
-    const translation = useTranslation();
+    const { t } = useTranslation();
     const { user } = useUserSelector();
     const { theme } = useTheme();
 
     return (
-        <View>
-            <Text>Hello</Text>
-        </View>
+        <ScreenWrapper>
+            <Text 
+                label={t('welcome')}
+            />
+        </ScreenWrapper>
     )
 }
