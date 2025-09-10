@@ -1,6 +1,9 @@
 {
     "welcome": {
-        "title": "welcome to our app!"
+        "title": "welcome to our app!",
+        "subtitle": "Discover amazing features and start your journey with us",
+        "primaryButton": "Get Started",
+        "secondaryButton": "Learn More"
     },
     "home": {
         "title": "Home"

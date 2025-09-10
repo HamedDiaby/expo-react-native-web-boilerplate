@@ -1,6 +1,9 @@
 {
     "welcome": {
-        "title": "Bienvenue dans notre application!"
+        "title": "Bienvenue dans notre application!",
+        "subtitle": "Découvrez des fonctionnalités incroyables et commencez votre voyage avec nous",
+        "primaryButton": "Commencer",
+        "secondaryButton": "En savoir plus"
     },
     "home": {
         "title": "Accueil"
