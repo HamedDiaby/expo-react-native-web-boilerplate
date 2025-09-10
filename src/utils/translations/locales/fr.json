@@ -1,5 +1,12 @@
 {
+    "welcome": {
+        "welcome": "Bienvenue dans notre application!"
+    },
     "home": {
-        "welcome": "Bienvenue dans notre application {username} !"
+        "title": "Accueil"
+    },
+    "profile": {
+        "title": "Profil",
+        "hello": "Bonjour {username} !"
     }
 }

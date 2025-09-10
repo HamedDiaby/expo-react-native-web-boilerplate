@@ -1,19 +1,17 @@
 import { FC } from "react";
-import { useStyles } from "./useStyles";
 import { useTheme } from '@rneui/themed';
 import { ScreenWrapper, Text } from "@components";
 import { useControllers } from "./useControllers";
 
-export const Home:FC = ()=> {
+export const Welcome:FC = ()=> {
 
-    const styles = useStyles();
     const { theme } = useTheme();
     const { t } = useControllers();
 
     return (
         <ScreenWrapper>
             <Text 
-                label={t('home.title')}
+                label={t('welcome.title')}
             />
         </ScreenWrapper>
     )

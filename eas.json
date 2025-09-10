@@ -1,0 +1,43 @@
+{
+  "cli": {
+    "version": ">= 15.0.4",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "base": {
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease"
+      }
+    },
+    "simulator": {
+      "extends": "base",
+      "ios": { "simulator": true },
+      "distribution": "internal"
+    },
+    "development": {
+      "extends": "base",
+      "developmentClient": true,
+      "distribution": "internal",
+      "autoIncrement": true
+    },
+    "development-device": {
+      "extends": "base",
+      "ios": { "simulator": false },
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "extends": "base",
+      "distribution": "internal",
+      "autoIncrement": true
+    },
+    "production": {
+      "extends": "base",
+      "autoIncrement": true
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
