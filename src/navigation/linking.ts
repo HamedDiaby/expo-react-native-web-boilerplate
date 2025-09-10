@@ -5,8 +5,8 @@ const isWeb = Platform.OS === 'web';
 
 export const linking = {
     prefixes: isWeb 
-    ? ['http://localhost:8080']
-    : ['expo-react-native-web-boilerplate://', 'http://localhost:19000', 'http://localhost:8080'],
+    ? ['http://localhost:8081']
+    : ['expo-react-native-web-boilerplate://', 'http://localhost:19000', 'http://localhost:8081'],
     config: {
         screens: {
             [NavigationStackEnum.ONBOARDING_STACK]: {
