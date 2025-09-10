@@ -1,36 +1,28 @@
-import React from "react";
+import { Fragment, FC } from "react";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Text } from "react-native";
-
-import { NavigationStackRoutesEnum } from "@utils/enums";
 import { linking } from "./linking";
-import { ErrorBoundary } from "./ErrorBoundary";
-import { commonScreenOptions } from "./common";
-import { 
-    HomeStackScreen,
-} from "./stacks";
+import { NavigationStackEnum } from "@utils/enums";
+import { TabNavigator } from "./TabNavigator";
+import { OnboardingStackScreen } from "./stacks";
 
 const Stack = createNativeStackNavigator();
 
-export const Navigation: React.FC = () => (
-    <ErrorBoundary>
-        <NavigationContainer
-            linking={linking}
-            fallback={<Text>Loading...</Text>}
+const screenOptions = {
+  headerShown: false,
+};
+
+export const Navigation:FC = () => (
+    <NavigationContainer
+        linking={linking}
+        fallback={<Fragment />}
+    >
+        <Stack.Navigator
+          initialRouteName={NavigationStackEnum.ONBOARDING_STACK}
+          screenOptions={screenOptions}
         >
-            <Stack.Navigator 
-                screenOptions={{
-                    ...commonScreenOptions, 
-                    animation: 'fade',
-                }}
-            >
-                <Stack.Screen 
-                    name={NavigationStackRoutesEnum.HomeStack} 
-                    component={HomeStackScreen}
-                    options={commonScreenOptions}
-                />
-            </Stack.Navigator>
-        </NavigationContainer>
-    </ErrorBoundary>
+          <Stack.Screen name={NavigationStackEnum.ONBOARDING_STACK} component={OnboardingStackScreen} />
+          <Stack.Screen name={NavigationStackEnum.MAIN_TABS} component={TabNavigator} />
+        </Stack.Navigator>
+    </NavigationContainer>
 );

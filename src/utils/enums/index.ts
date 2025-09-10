@@ -1,4 +1,3 @@
-export * from './NavigationStackRoutesEnum';
-export * from './NavigationRoutesEnum';
+export * from './NavigationEnum';
 export * from './PathRequestEnum';
 export * from './FontsEnum';
